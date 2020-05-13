@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Recipe} from './recipes/recipe.model'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-complete-guide';
+  page: string = 'recipes';
+  recipe: Recipe
+  onPageChange(pageData: {page: string}){
+    this.page = pageData.page;
+  }
+  onRecipeChanged(recipeData: {recipe: Recipe}) {
+    console.log(recipeData.recipe)
+  }
 }
