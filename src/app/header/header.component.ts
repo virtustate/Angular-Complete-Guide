@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-  @Output() pageChange = new EventEmitter<{page: string}>();
   constructor() { }
   ngOnInit(): void {
-  }
-  onClickMenu(page: string){
-    this.pageChange.emit({page: page});
   }
 }
